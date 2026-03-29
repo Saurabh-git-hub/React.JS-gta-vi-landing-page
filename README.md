@@ -15,6 +15,7 @@ A landing page for Grand Theft Auto VI featuring smooth animations, responsive d
 </div>
 
 ---
+## <div align="center"> [🎬 Demo Video](https://drive.google.com/file/d/1K2GRxaupOSGR5mB2jScX5wRMkp1EbnNg/view?usp=sharing)  / [ 🌐 Live Demo](https://react-js-gta-vi-landing-page.vercel.app/)
 
 ## ✨ Features
 
@@ -42,34 +43,43 @@ A landing page for Grand Theft Auto VI featuring smooth animations, responsive d
 | **Remix Icon** | Icon library |
 
 ---
+## 📊 Architecture Diagram
 
-## 📦 Installation
-
-### Prerequisites
-- Node.js v18 or higher
-- npm or yarn package manager
-
-### Quick Start
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Saurabh-git-hub/React.JS-gta-vi-landing-page.git
-   cd React.JS-gta-vi-landing-page
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start Development Server**
-   ```bash
-   npm run dev
-   ```
-   The application will be available at `http://localhost:5173`
-
----
-
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Landing Page App                        │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+            ┌───────▼────────┐   ┌──────▼───────┐
+            │  Hero Section  │   │    Lenis     │
+            │  (SVG Mask)    │   │ Smooth Scroll│
+            └────────────────┘   └──────────────┘
+                    │
+        ┌───────────┼───────────┐
+        │           │           │
+   ┌────▼────┐ ┌────▼────┐ ┌───▼────┐
+   │Character│ │Character│ │Character│
+   │ Sections│ │ Sections│ │ Sections│
+   └────┬────┘ └────┬────┘ └───┬────┘
+        │           │           │
+        └───────────┼───────────┘
+                    │
+        ┌───────────▼───────────┐
+        │   GSAP Animations     │
+        │ - Parallax scroll     │
+        │ - Hover effects       │
+        │ - Text reveals        │
+        └───────────┬───────────┘
+                    │
+        ┌───────────▼───────────┐
+        │   Interactive UI      │
+        │ - Buttons/Links       │
+        │ - Video Player        │
+        │ - Social Cards        │
+        └───────────────────────┘
+```
 ## 📁 Project Structure
 
 ```
@@ -99,6 +109,35 @@ tailwind.config.js
 ```
 
 ---
+
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js v18 or higher
+- npm or yarn package manager
+
+### Quick Start
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Saurabh-git-hub/React.JS-gta-vi-landing-page.git
+   cd React.JS-gta-vi-landing-page
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at `http://localhost:5173`
+
+---
+
 
 ## 🎯 Sections
 
@@ -142,41 +181,6 @@ npm run lint         # Run ESLint
 
 ---
 
-## 🎨 Customization
-
-### Update Links
-All buttons and CTAs link to: `https://saurabh-s-w-e.vercel.app/`
-
-To change:
-1. Search `saurabh-s-w-e.vercel.app` in `src/App.jsx`
-2. Replace with your desired URL
-3. Update all `<a>` tags with `href` attribute
-
-### Modify Images
-Replace images in the `public/` folder:
-- `bg.png` - Background building
-- `sky.png` - Sky layer
-- `imag.png` - Character images
-- `video.mp4` - Footer video
-
-### Customize Colors
-Update Tailwind classes in `src/App.jsx`:
-```jsx
-// Example: Change button color from yellow to another
-className='bg-yellow-500'  // Change to bg-blue-500, bg-red-500, etc.
-```
-
-### Adjust Animations
-GSAP animations in `src/App.jsx`:
-```jsx
-.to(".element", {
-    duration: 2,      // Change animation duration
-    ease: "Power4",   // Change easing function
-    // ... other properties
-})
-```
-
----
 
 ## 🚀 Deployment
 
@@ -197,43 +201,6 @@ GSAP animations in `src/App.jsx`:
 
 ---
 
-## 📊 Architecture Diagram
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     Landing Page App                        │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                    ┌─────────┴─────────┐
-                    │                   │
-            ┌───────▼────────┐   ┌──────▼───────┐
-            │  Hero Section  │   │    Lenis     │
-            │  (SVG Mask)    │   │ Smooth Scroll│
-            └────────────────┘   └──────────────┘
-                    │
-        ┌───────────┼───────────┐
-        │           │           │
-   ┌────▼────┐ ┌────▼────┐ ┌───▼────┐
-   │Character│ │Character│ │Character│
-   │ Sections│ │ Sections│ │ Sections│
-   └────┬────┘ └────┬────┘ └───┬────┘
-        │           │           │
-        └───────────┼───────────┘
-                    │
-        ┌───────────▼───────────┐
-        │   GSAP Animations     │
-        │ - Parallax scroll     │
-        │ - Hover effects       │
-        │ - Text reveals        │
-        └───────────┬───────────┘
-                    │
-        ┌───────────▼───────────┐
-        │   Interactive UI      │
-        │ - Buttons/Links       │
-        │ - Video Player        │
-        │ - Social Cards        │
-        └───────────────────────┘
-```
 
 ---
 
