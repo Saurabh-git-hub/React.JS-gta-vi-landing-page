@@ -1,0 +1,223 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-heading: "pricedown", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+@font-face {
+
+    /* importing font that is downloaded in the public folder */
+    font-family: "pricedown";
+    src: url("/pricedown.otf");
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "pricedown", sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* Enhanced Glow Effects */
+.limg {
+  position: relative;
+  overflow: visible;
+}
+
+/* Image glow (golden) */
+.limg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle, 
+    rgba(255, 215, 0, 0.3) 0%,
+    rgba(255, 215, 0, 0) 80%
+  );
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.limg:hover::before {
+  opacity: 0.9;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.limg img {
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.limg:hover img {
+  filter: brightness(1.08) drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+}
+
+/* Headings glow (intense gold) */
+.rg h1 {
+  transition: all 0.4s ease-out;
+  text-shadow: 0 0 0px rgba(255, 215, 0, 0);
+  display: inline-block;
+}
+
+.rg:hover h1 {
+  text-shadow: 
+    0 0 15px rgba(255, 215, 0, 0.8),
+    0 0 30px rgba(255, 215, 0, 0.4);
+  transform: translateX(5px);
+}
+
+/* Button glow (strongest gold) */
+.rg button {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+  box-shadow: 
+    0 0 0px rgba(255, 215, 0, 0),
+    0 0 0px rgba(255, 255, 255, 0);
+}
+
+.rg button:hover {
+  box-shadow: 
+    0 0 25px rgba(255, 215, 0, 0.9),
+    0 0 40px rgba(255, 215, 0, 0.4);
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* Paragraph glow (cool silver) */
+.rg p {
+  transition: all 0.5s ease;
+}
+
+.rg:hover p {
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 5px rgba(192, 192, 192, 0.4);
+}
+
+
+/* Red Glow for Subscribe Button */
+button.btn2 {
+  background-color: #EF4444 !important;
+  box-shadow: none !important;
+}
+
+button.btn2:hover {
+  background-color: #DC2626 !important;
+  box-shadow: 
+    0 0 25px rgba(255, 0, 0, 0.9),
+    0 0 40px rgba(255, 50, 50, 0.6) !important;
+}
+
+/* Blue Glow Button styles */
+button.btn3 {
+  background-color: #3B82F6 !important; /* blue-500 */
+  box-shadow: none !important;
+}
+
+button.btn3:hover {
+  background-color: #2563EB !important; /* blue-600 */
+  box-shadow: 
+    0 0 25px rgba(59, 130, 246, 0.7),
+    0 0 40px rgba(96, 165, 250, 0.4) !important;
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* Green Glow Button - Add to your CSS */
+button.btn4 {
+  background-color: #1DB954 !important; /* Spotify green colour*/
+  box-shadow: none !important;
+}
+
+button.btn4:hover {
+  background-color: #1ED760 !important; /* Spotify light green */
+  box-shadow: 
+    0 0 25px rgba(29, 185, 84, 0.7),
+    0 0 40px rgba(30, 215, 96, 0.4) !important;
+  transform: translateY(-3px) scale(1.03);
+}
+
+
+/* Highway animation */
+.highway-lines {
+  animation: highwayMove 2s linear infinite;
+}
+
+@keyframes highwayMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-128px); }
+}
+
+/* Wanted poster hover effect */
+.wanted-poster:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+/* Social card hover effect */
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+/* Police star animation */
+.police-star:hover {
+  animation: sirenSpin 1s linear infinite;
+}
+
+@keyframes sirenSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Link hover effects */
+.links a {
+  position: relative;
+}
+
+.links a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: black;
+  animation: linkUnderline 0.3s forwards;
+}
+
+@keyframes linkUnderline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Lenis smooth scroll base styles */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+
+
